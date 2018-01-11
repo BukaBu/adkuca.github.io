@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" media="screen" href="css/colorpicker.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="vline-container">
+        <div id="vline-left"></div>
+        <div id="vline-mid"></div>
+        <div id="vline-right"></div>
+    </div>
+    <div id="grid">
+        <div class="link">
+            <hr>
+            <input type="button" id="btn3" class="btn37" value="Color Grid">
+            <hr>
+        </div>
+        <div class="link">
+            <hr>
+            <input type="button" id="btn4" class="btn37" value="Color Background">
+            <hr>
+        </div>
+        <div class="link">
+            <hr>
+            <input type="button" id="btn5" class="btn37" value="Color Colored Cells">
+            <hr>
+        </div>
+        <div class="link">
+            <hr>
+            <input type="button" id="btn6" class="btn37" value="Color Uncolored Cells">
+            <hr>
+        </div>
+        <div class="link">
+            <hr>
+            <input type="button" id="btn7" class="btn37" value="Color All Cells">
+            <hr>
+        </div>
+    </div>
+<header><p id="header-text" class="header-glow">Lab: Pixel Art Maker</p></header>
+        <form id="size-picker">
+            <div id="inputs-div">
+                <div class="link">
+                    <hr>
+                    <p id="label-height" class="labels">Height:</p>
+                    <hr>
+                    <input type="number" id="input-height" class="num-inputs" name="height" min="1" value="25">
+                    <hr>
+                </div>
+                <div class="link">
+                    <hr>
+                    <p id="label-width" class="labels">Width:</p>
+                    <hr>
+                    <input type="number" id="input-width" class="num-inputs" name="width" min="1" value="25">
+                    <hr>
+                </div>
+                <div class="link">
+                    <hr>
+                    <p class="labels">Resolution:</p>
+                    <hr>
+                    <input type="number" id="input-res" class="num-inputs" name="width" min="1" value="20">
+                    <hr>
+                </div>
+            </div>
+            <div id="button-div">
+                <div id="btn-inputs">
+                    <input type="submit" id="submit" class="button-inputs">
+                    <input type="button" id="btn1" class="button-inputs" value="Clear Canvas">
+                    <input type="button" id="btn2" class="button-inputs" value="Remove Canvas">
+                </div>
+                <div id="button-color">
+                    <input type="color" id="color-input">
+                </div>
+            </div>
+            <div id="checkbox">
+                <div class="link">
+                    <hr>
+                    <input id="checkbox1" type="checkbox">
+                    <hr>
+                    <p class="labels">Palette Drag</p>
+                    <hr>
+                </div>
+                <div class="link">
+                    <hr>
+                    <input id="checkbox2" type="checkbox">
+                    <hr>
+                    <p class="labels">Lamp Enabled</p>
+                    <hr>
+                </div>
+            </div>
+        </form>
+<div id="color-picker-div"></div>
+<table id="pixel-canvas"></table>
+    <script src="js/colorpicker.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="designs.js"></script>
+</body>
+</html>
