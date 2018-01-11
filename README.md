@@ -2,15 +2,22 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+The custom Color-Picker is from http://www.eyecon.ro/colorpicker/#about and I regret using this one :).
 
-## Instructions
+LMB/RMB to apply/remove color.
 
-To get started, open `designs.js` and start building out the app's functionality.
+Click on the header to turn on/off glow. (might be laggy)
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+The "Lamp" sticks to top when page is scrolled below break.
 
-## Contributing
+The resolution changes on input-change.
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+Clear Canvas and Remove Canvas buttons are enabled/disabled depending on table and cell color existance.
+
+The custom Color-Picker is draggable, can be turned on/off with checkbox.
+
+The lamp can be disabled and unvisible, checkbox.
+
+Color-Picker and Color type Input change colors depending on eachother.
+
+Some elements glow at certain actions.
