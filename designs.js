@@ -266,7 +266,7 @@ $(function() {
     function cellClickAddColor (evt) {
             if (evt.button === 0) {
                 evt.target.style.backgroundColor = colorPicker.value;
-            } else if (evt.button = 2) {
+            } else if (evt.button === 2) {
                 evt.target.style.backgroundColor = '';
             }
             btn1Clickable();
