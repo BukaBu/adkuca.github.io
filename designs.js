@@ -273,9 +273,9 @@ $(function() {
     }
     /** ADDS/CLEARS COLOR OF A CELL ON A MOUSEOVER, ADDS WITH RMB, CLEARS WITH RMB **/
     function cellHoverAddColor (evt) {
-            if (evt.buttons === 1) {
+            if (evt.buttons === 1 && !(evt.target === pCanvas)) {
                 evt.target.style.backgroundColor = colorPicker.value;
-            } else if (evt.buttons === 2) {
+            } else if (evt.buttons === 2 && !(evt.target === pCanvas)) {
                 evt.target.style.backgroundColor = '';
             }
             btn1Clickable();
