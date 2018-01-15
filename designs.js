@@ -252,36 +252,33 @@ $(function() {
             const row = pCanvas.insertRow(i);
             for (let j = 0; j < pWidth.value; j++) {
                 const cell = row.insertCell(j);
-                cellClickAddColor(cell);
-                cellHoverAddColor(cell);
                 cellHW(row, cell);
-                btn1Clickable();
-                btn2Clickable();
-
             }
         }
+        btn1Clickable();
+        btn2Clickable();
     }
+    
+    pCanvas.addEventListener('mousedown', cellClickAddColor);
+    pCanvas.addEventListener('mouseover', cellHoverAddColor);
+
     /** ADDS/CLEARS COLOR OF A CELL ON A MOUSEDOWN, ADDS WITH RMB, CLEARS WITH RMB **/
-    function cellClickAddColor (cell) {
-        cell.addEventListener('mousedown', function(evt) {
+    function cellClickAddColor (evt) {
             if (evt.button === 0) {
-                this.style.backgroundColor = colorPicker.value;
+                evt.target.style.backgroundColor = colorPicker.value;
             } else if (evt.button = 2) {
-                this.style.backgroundColor = '';
+                evt.target.style.backgroundColor = '';
             }
             btn1Clickable();
-        })
     }
     /** ADDS/CLEARS COLOR OF A CELL ON A MOUSEOVER, ADDS WITH RMB, CLEARS WITH RMB **/
-    function cellHoverAddColor (cell) {
-        cell.addEventListener('mouseover', function(evt) {
+    function cellHoverAddColor (evt) {
             if (evt.buttons === 1) {
-                cell.style.backgroundColor = colorPicker.value;
+                evt.target.style.backgroundColor = colorPicker.value;
             } else if (evt.buttons === 2) {
-                cell.style.backgroundColor = '';
+                evt.target.style.backgroundColor = '';
             }
             btn1Clickable();
-        })
     }
     /** ADDS/REMOVES CLASS TO THE 'lamp' WHILE SCROLLING UP/DOWN SO IT STICKS ON TOP **/
     window.addEventListener('scroll', function() {
